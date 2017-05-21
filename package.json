@@ -1,7 +1,6 @@
 {
   "name": "actual_ransom",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "d3": "3.*",
     "queue-async": "*",
