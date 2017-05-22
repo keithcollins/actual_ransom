@@ -149,11 +149,9 @@ function getTotalBTC(transactions) {
 function doTweet(str) {
   T.post('statuses/update', { status: str },function(error, data, response) {
     if (error) {
-      log("btc",null,error);
-      var opt = {text:str+"\n"+error,screen_name:"@collinskeith"};
-      T.post('direct_messages/new',opt, function(error, data, response){});
+      console.log(error);
     } else {
-      log("btc",data.id_str,str);
+      console.log(str);
     }
   });
 }
