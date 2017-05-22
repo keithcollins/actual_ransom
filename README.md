@@ -12,7 +12,7 @@ val_satoshi - the value of the payment in satoshi, kind of like the pennies of b
 val_btc - the value of the payment in bitcoin
 unix_time - timestamp
 
-See also: [pi-bots](https://twitter.com/pi-bots), a simple system for running Twitter bots from your Raspberry Pi.
+See also: [pi-bots](https://github.com/keithcollins/pi-bots), a simple system for running Twitter bots from your Raspberry Pi.
 
 More details:
 
