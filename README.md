@@ -6,7 +6,7 @@ A Twitter bot that watches bitcoin wallets tied to the #WannaCry ransomware atta
 Data in `tx.json` is as of 2017-05-21 at 8:00 p.m. EDT.
 
 The fields in tx.json are:
-
+```
 address - the address of the wallet the payment went to
 
 tx_hash - the unique identified of the payment transaction
@@ -16,6 +16,7 @@ val_satoshi - the value of the payment in satoshi, kind of like the pennies of b
 val_btc - the value of the payment in bitcoin
 
 unix_time - timestamp
+```
 
 See also: [pi-bots](https://github.com/keithcollins/pi-bots), a simple system for running Twitter bots from your Raspberry Pi.
 
