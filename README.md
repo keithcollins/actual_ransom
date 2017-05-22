@@ -9,7 +9,7 @@ The fields in tx.json are:
 ```
 address_to - the address of the wallet the payment went to
 
-addresses_from - the bitcoin address the payment came from
+addresses_from -the bitcoin address(es) the payment came from, separated by | if more than one
 
 num_addresses_from - the number of addresses the payment came from (sometimes they come from more than one)
 
