@@ -1,7 +1,11 @@
 # actual_ransom
-A Twitter bot that watches bitcoin wallets tied to the WannaCry ransomware attack
+[@actual_ransom](https://twitter.com/actual_ransom) is a Twitter bot that watches bitcoin wallets tied to the WannaCry ransomware attack
 
-[@actual_ransom](https://twitter.com/actual_ransom)
+Everyone whose computer was infected in the widespread WannaCry ransomware attack on May 12 was asked to send a ransom payment of $300 or more to one of three bitcoin addresses. Although they're anonymous, all wallets associated with bitcoin addresses are also public. Since there were only three wallets used in this attack, it was easy to watch them on sites like Blockchain.info as ransom payments came in. I made this twitter bot to tweet when new ransom payments hit any of the three wallets. While it monitored the wallets, it also collected data on each transaction.
+
+The script is also setup to tweet if a withdraw is made from any of the wallets.
+
+## Data
 
 Data in `tx.json` is as of 2017-05-22 at 5:00 p.m. EDT.
 
@@ -24,13 +28,25 @@ unix_time - timestamp
 
 The source of this data is the blockchain itself, via the [Blockchain.info API](https://blockchain.info/api).
 
-See also: [pi-bots](https://github.com/keithcollins/pi-bots), a simple system for running Twitter bots from your Raspberry Pi.
+## How to use
 
-More details:
+First, please don't make a clone of this bot. Obviously, the time to use this script has passed, and the original bot already exists. But it could be modified to tweet payments to other interesting accounts, or to collect data on particular wallets from Blockchain.info.
 
-All of the people hit in the widespread WannaCry ransomware attack last week were asked to send their ransom payments to one of just three bitcoin addresses. It was an unusual move; it makes more sense for ransomware to use a unique bitcoin address for each computer it infects, so the hackers know who paid what. But using just three addresses made it easy to watch the three wallets associated with those addresses, because all bitcoin wallets are public.
+**Install**
 
-That meant anyone could watch the incoming ransom payments in real time. I made this twitter bot to tweet when new ransom payments hit any of the three wallets, [@actual_ransom](https://twitter.com/actual_ransom). While it monitored the wallets, it also collected data on each transaction.
+`npm install`
+
+**Run script**
+
+`node actual_ransom.js`
+
+**Run script and output total balance of all three wallets**
+
+`node actual_ransom.js check`
+
+## See also
+
+[pi-bots](https://github.com/keithcollins/pi-bots), a simple system for running Twitter bots from your Raspberry Pi.
 
 [More on the data](https://qz.com/986094/wannacry-ransomware-attacks-victims-have-stopped-paying-the-ransom/)
 
