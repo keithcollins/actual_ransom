@@ -104,6 +104,7 @@ function checkWallets(i,cb) {
             }
           });
           // which way is this transaction going
+          var from_addresses = [];
           var val_satoshi = 0;
           if (outgoing_satoshi > 0) {
             // it's a withdraw/ outgoing btc
@@ -115,10 +116,17 @@ function checkWallets(i,cb) {
             val_satoshi = tx.out.filter(function(d){
               return d.addr == addresses[i];
             })[0].value;
+            // since it's incoming, collect the
+            // addresses it's coming from
+            tx.inputs.forEach(function(input){
+              from_addresses.push(input.prev_out.addr);
+            });
           }
           // save new transaction to array
           new_transactions.push({
-            address: addresses[i],
+            address_to: addresses[i],
+            addresses_from: from_addresses.join("|"),
+            num_addresses_from: from_addresses.length,
             tx_hash: tx.hash,
             val_satoshi: val_satoshi,
             val_btc: sb.toBitcoin(val_satoshi),
