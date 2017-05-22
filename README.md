@@ -1,13 +1,17 @@
 # actual_ransom
-A Twitter bot that watches bitcoin wallets tied to the #WannaCry ransomware attack
+A Twitter bot that watches bitcoin wallets tied to the WannaCry ransomware attack
 
 [@actual_ransom](https://twitter.com/actual_ransom)
 
-Data in `tx.json` is as of 2017-05-21 at 8:00 p.m. EDT.
+Data in `tx.json` is as of 2017-05-22 at 5:00 p.m. EDT.
 
 The fields in tx.json are:
 ```
-address - the address of the wallet the payment went to
+address_to - the address of the wallet the payment went to
+
+addresses_from - the bitcoin address the payment came from
+
+num_addresses_from - the number of addresses the payment came from (sometimes they come from more than one)
 
 tx_hash - the unique identified of the payment transaction
 
