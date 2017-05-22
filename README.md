@@ -22,6 +22,8 @@ val_btc - the value of the payment in bitcoin
 unix_time - timestamp
 ```
 
+The source of this data is the blockchain itself, via the [Blockchain.info API](https://blockchain.info/api).
+
 See also: [pi-bots](https://github.com/keithcollins/pi-bots), a simple system for running Twitter bots from your Raspberry Pi.
 
 More details:
