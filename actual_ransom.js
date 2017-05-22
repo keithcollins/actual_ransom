@@ -120,8 +120,6 @@ function checkWallets(i,cb) {
           new_transactions.push({
             address: addresses[i],
             tx_hash: tx.hash,
-            input: tx.inputs[0].prev_out.value,
-            total_output: d3.sum(tx.out, function(d){ return +d.value }),
             val_satoshi: val_satoshi,
             val_btc: sb.toBitcoin(val_satoshi),
             unix_time: tx.time
