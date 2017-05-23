@@ -3,14 +3,6 @@ var request = require("request");
 var d3 = require('d3');
 var queue = require('queue-async');
 var sb = require('satoshi-bitcoin');
-var Twit = require('twit');
-
-var T = new Twit({
-  consumer_key: '',
-  consumer_secret: '',
-  access_token: '',
-  access_token_secret: ''
-});
 
 // the bitcoin addresses associated with wcrypt
 var addresses = [
@@ -155,11 +147,7 @@ function getTotalBTC(transactions) {
 }
 
 function doTweet(str) {
-  T.post('statuses/update', { status: str },function(error, data, response) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log(str);
-    }
-  });
+  // here's the string we've come up with to tweet.
+  // to get it out, implement the twitter API however you'd like
+  console.log(str);
 }
