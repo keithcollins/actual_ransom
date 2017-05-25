@@ -17,7 +17,7 @@ addresses_from -the bitcoin address(es) the payment came from, separated by | if
 
 num_addresses_from - the number of addresses the payment came from (sometimes they come from more than one)
 
-tx_hash - the unique identified of the payment transaction
+tx_hash - the unique identifier of the payment transaction
 
 val_satoshi - the value of the payment in satoshi, kind of like the pennies of bitcoin
 
